@@ -1,20 +1,3 @@
-/*Sobrecarga
- * 	Mesma classe
- * 	Mesmo nome
- * 	Assinaturas diferentes
- Sobrescrita
- *  classes numa hierarquia de herança
- *  mesma assinatura
- *  
- 
- Abstract:
-     Não pode criar uma instancia dessa classe. Ela podem ser usadas como um tipo
- Metodos Abstract:
-     São metodos sem implementação. A SubClasse deve implementá-lo
- Interface:
-     classe Abstract com métodos abstract.*/
-
-
 import java.util.Scanner;
 
 /*Enunciado:
