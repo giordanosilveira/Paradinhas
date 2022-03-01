@@ -1,0 +1,23 @@
+package exerciciosAula4;
+import java.util.Vector;
+
+import exerciciosAula4.Aluno;
+public class Arquivo {
+	
+	private Vector<Aluno> lista_alunos = new Vector<>();
+	
+	public void gravaAluno(String nome, String email, String grr) {
+        Aluno aluno = new Aluno(nome, email, grr);
+        lista_alunos.add(aluno);
+	}
+	
+	public Aluno getUltimoElemento() {
+		return this.lista_alunos.firstElement();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

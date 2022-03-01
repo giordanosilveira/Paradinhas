@@ -1,9 +1,14 @@
 package exerciciosAula4;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Aluno extends Pessoa {
+public class Aluno extends Pessoa implements Serializable{
     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String grr;
 	
 	public Aluno(String nome, String email, String grr) {

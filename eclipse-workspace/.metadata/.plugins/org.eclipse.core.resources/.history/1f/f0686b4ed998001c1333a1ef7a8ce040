@@ -1,0 +1,65 @@
+package exerciciosAula4;
+
+import java.util.Scanner;
+
+public class Menu {
+
+	private ManterAluno opcoes = new ManterAluno();
+	public static Scanner teclado = new Scanner(System.in);
+	 
+	public void inserir() {
+		System.out.println("Insira o nome, o email e o grr do novo aluno");
+		this.opcoes.inserirAluno(teclado.nextLine(), teclado.nextLine(), teclado.nextLine());
+		opcoes.imprimirAlunos();
+	}
+	
+	public void remover() {
+		System.out.println("Digite o GRR do aluno que você quer remover: ");
+		this.opcoes.removerAluno(teclado.nextLine());
+	}
+	
+	public void salvar() {
+		this.opcoes.salvarAluno();
+	}
+	
+	public void recuperar() {
+		this.opcoes.recuperarAluno();
+	}
+	
+	public static void main(String[] args) {
+		Menu opcao = new Menu();
+		boolean sair = false;
+		while (! sair) {
+			System.out.println("Aperte '1' para inserir um aluno novo");
+			System.out.println("Aperte '2' para remover um aluno");
+			System.out.println("Aperte '3' para salvar os alunos em um arquivo");
+			System.out.println("Aperte '4' para recuperar esses alunos de um arquivo");
+			System.out.println("Aperte '0' para sair");
+			int opcao_requisitada = teclado.nextInt();
+			System.out.println("op" +opcao_requisitada);
+			switch (opcao_requisitada) {
+			    case 1:
+			        opcao.inserir();
+			        break;
+			    case 2:
+			    	opcao.remover();
+			    	break;
+			    case 3:
+			    	opcao.salvar();
+			    	break;
+			    case 4:
+			        opcao.recuperar();
+			        break;
+			    case 0:
+			    	sair = true;
+			    	break;
+			    default:
+			    	System.out.println("Opção não encontrada");
+			    	break;
+			}
+			System.out.println("aqui");
+		}
+		teclado.close();
+	}
+
+}

@@ -1,0 +1,10 @@
+package exerciciosAula4;
+import exerciciosAula4.Pessoa;
+public class Aluno extends Pessoa {
+    super(nome, email);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

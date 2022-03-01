@@ -1,0 +1,36 @@
+package exerciciosAula4;
+
+import java.util.Scanner;
+
+public class Menu {
+
+	private ManterAluno opcoes = new ManterAluno();
+	 
+	public void inserir() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Insira o nome, o email e o grr do novo aluno");
+		this.opcoes.inserirAluno(teclado.nextLine(), teclado.nextLine(), teclado.nextLine());
+		teclado.close();
+	}
+	
+	public void remover() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Digite o GRR do aluno que você quer remover: ");
+		this.opcoes.removerAluno(teclado.nextLine());
+		teclado.close();
+	}
+	
+	public void salvar() {
+		this.opcoes.salvarAluno();
+	}
+	
+	public void recuperar() {
+		this.opcoes.recuperarAluno();
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

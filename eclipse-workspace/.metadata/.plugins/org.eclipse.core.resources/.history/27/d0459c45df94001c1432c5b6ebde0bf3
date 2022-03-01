@@ -1,0 +1,49 @@
+package exerciciosAula4;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Arquivo {
+	
+	private Vector<Aluno> lista_alunos = new Vector<Aluno>();
+	
+	public void gravaAluno(String nome, String email, String grr) {
+		Aluno aluno = new Aluno(nome, email, grr);
+        this.lista_alunos.add(aluno);
+	}
+	
+	public Aluno getUltimoElemento() {
+		return this.lista_alunos.lastElement();
+	}
+	
+	public Aluno getPrimeiroElemento() {
+		return this.lista_alunos.firstElement();
+	}
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Arquivo arq = new Arquivo();
+
+		String nome, email, grr;
+		
+		System.out.println("Escreva o nome, o email e o grr do aluno: ");
+		nome = teclado.nextLine();
+		email = teclado.nextLine();
+		grr = teclado.nextLine();
+		
+		arq.gravaAluno(nome, email, grr);
+		
+		nome = "Giordano";
+		email = "giordano@gmail.com";
+		grr = "53151315";
+				
+		arq.gravaAluno(nome, email, grr);
+		System.out.println(arq.getUltimoElemento().getNome() + " " + arq.getUltimoElemento().getEmail() + " " + arq.getUltimoElemento().getGrr());
+		System.out.println(arq.getPrimeiroElemento().getNome() + " " + arq.getPrimeiroElemento().getEmail() + " " + arq.getPrimeiroElemento().getGrr());
+		
+		
+		
+		
+
+	}
+
+}

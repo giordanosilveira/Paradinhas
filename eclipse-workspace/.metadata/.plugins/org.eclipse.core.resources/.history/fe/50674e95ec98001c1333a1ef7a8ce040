@@ -1,0 +1,33 @@
+package aula3;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Arquivo {
+    
+	public static void main(String[] args) throws IOException {
+		
+		Leitor leitor = new Leitor();
+		FileWriter escritor = new FileWriter("pessoas.txt");
+		for (int i = 0; i < 4; i++) {
+		    Pessoa pessoa = new Pessoa();
+		    System.out.println("Escreva o nome, o endereço, o email e o telefone da pessoa:...");
+		    pessoa.nome = leitor.leString();
+			pessoa.endereco = leitor.leString();
+			pessoa.email = leitor.leString();
+			pessoa.telefone = leitor.leString();
+			
+			try {
+				String dados_pessoa;
+				dados_pessoa = pessoa.nome + "," + pessoa.email + "," + pessoa.endereco + "," + pessoa.telefone;
+				escritor.write(dados_pessoa);
+			}
+			catch (IOException e){
+				System.out.println("An error occured. ");
+				e.printStackTrace();
+			}
+        
+		}
+		escritor.close();
+	}	
+}

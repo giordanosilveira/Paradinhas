@@ -1,0 +1,10 @@
+INDEX VERSION 1.131+/home/pingo/Documentos/Paradinhas/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3808110549.index
+2640793726.index
+3548278923.index
+1030754727.index
+3558061202.index
+1865797976.index
+1249321265.index
+2736030724.index
+2388851705.index

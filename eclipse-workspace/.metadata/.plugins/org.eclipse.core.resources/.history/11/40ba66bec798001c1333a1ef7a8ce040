@@ -1,0 +1,24 @@
+package exerciciosAula4;
+
+import java.util.Vector;
+
+public class ManterAluno {
+    
+	public void inserirAluno(String nome, String email, String grr) {
+		Arquivo arq = new Arquivo();
+		Aluno aluno = new Aluno(nome, email, grr);
+		arq.gravaVetorAluno(aluno);
+	}
+	
+	public Aluno recuperarAluno() {
+		Arquivo arq = new Arquivo();
+		Vector<Aluno> alunos = arq.getVector();
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

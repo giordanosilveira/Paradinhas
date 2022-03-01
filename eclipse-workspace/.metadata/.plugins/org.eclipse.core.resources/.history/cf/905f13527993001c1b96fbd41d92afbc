@@ -1,0 +1,19 @@
+package exerciciosAula4;
+//import exerciciosAula4.Pessoa;
+public class Aluno extends Pessoa {
+    
+	private String grr;
+	
+	public Aluno(String nome, String email, String grr) {
+		super(nome, email);
+		this.grr = grr;
+	}
+	
+	
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
